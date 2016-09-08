@@ -1,5 +1,7 @@
 package com.example.andy.androidproject1;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     // Otherwise display a toast error message
                     Toast.makeText(MainActivity.this, "Invalid Number",
                             Toast.LENGTH_SHORT).show();
+                    numberInput.getBackground().setColorFilter(Color.RED, PorterDuff.Mode.SRC_ATOP);
                 }
             }
         });
